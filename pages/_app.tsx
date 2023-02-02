@@ -6,7 +6,7 @@ import { ReactElement, ReactNode } from 'react';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import React from 'react';
-import { SessionProvider, useSession } from 'next-auth/react';
+import { SessionProvider } from 'next-auth/react';
 import 'suneditor/dist/css/suneditor.min.css';
 
 type NextPageWithLayout = NextPage & {

@@ -61,16 +61,17 @@ const Home: NextPage = () => {
         >
           Powered by
           <span className={styles.logo}>
-            <Image 
-              src="/images/vercel.svg" 
-              alt="Vercel Logo" width={72}
-              height={16} 
-              /> 
+            <Image
+              src="/images/vercel.svg"
+              alt="Vercel Logo"
+              width={72}
+              height={16}
+            />
           </span>
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
