@@ -19,7 +19,7 @@ type AppPropsWithLayout = AppProps & {
 
 function MyApp({
   Component,
-  //@ts-ignore
+  // eslint-disable-next-line no-use-before-define
   pageProps: { session, ...pageProps },
 }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
