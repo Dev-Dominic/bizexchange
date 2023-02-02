@@ -9,24 +9,15 @@
     "starter",
     "typescript"
   ],
-  "engines": {
-    "node": "^16.13.0"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "lint": "",
-    "format": "",
-    "postinstall": "",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+    "postinstall": "husky install",
     "commit": "cz"
-  },
-  "lint-staged": {
-    "./src/**/*.{ts,js,jsx,tsx}": [
-      "eslint --ignore-path .gitignore --fix",
-      "prettier --ignore-path .gitignore --write"
-    ]
   },
   "dependencies": {
     "@chakra-ui/react": "2.3.2",
@@ -36,7 +27,7 @@
     "date-fns": "2.29.3",
     "framer-motion": "7.3.5",
     "next": "12.3.0",
-    "next-auth": "4.19.2",
+    "next-auth": "4.10.3",
     "react": "18.2.0",
     "react-data-table-component": "7.5.3",
     "react-data-table-component-extensions": "1.6.0",
