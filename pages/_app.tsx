@@ -15,11 +15,11 @@ type NextPageWithLayout = NextPage & {
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
+  pageProps: any;
 };
 
 function MyApp({
   Component,
-  // eslint-disable-next-line no-use-before-define
   pageProps: { session, ...pageProps },
 }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
