@@ -13,15 +13,15 @@ export const AuthenticateAdmin = async (context: any) => {
   if (!session) {
     return {
       redirect: {
-        destination: '/auth/login',
+        destination: `/auth/login`,
         permanent: false,
       },
     };
   } else {
-    if (user.user.role.type !== 'admin') {
+    if (user.user.role.type !== `admin`) {
       return {
         redirect: {
-          destination: '/not-found',
+          destination: `/not-found`,
           permanent: false,
         },
       };
